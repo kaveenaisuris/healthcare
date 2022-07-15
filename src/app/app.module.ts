@@ -46,6 +46,11 @@ import {
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+   
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
 };
@@ -85,6 +90,8 @@ const APP_CONTAINERS = [
     BadgeModule,
     ListGroupModule,
     CardModule,
+    NgbModule,
+    FormsModule
   ],
   providers: [
     {

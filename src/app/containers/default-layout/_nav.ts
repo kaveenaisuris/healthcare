@@ -99,7 +99,7 @@ export const navItems: INavData[] = [
   {
     name: 'Patient-DB',
     url: '/patient',
-    iconComponent: { name: 'cil-puzzle' },
+    // iconComponent: { name: 'cil-puzzle' },
     children: [
       {
         name: 'RFID Details',
@@ -114,13 +114,13 @@ export const navItems: INavData[] = [
     {
       name: 'Appoiment',
       url: '/patient/appoiment',
-      iconComponent: { name: 'cil-chart-pie' }
+      // iconComponent: { name: 'cil-chart-pie' }
     },
     
     {
       name: 'Emergency altert',
       url: '/patient/emergency-altert',
-      iconComponent: { name: 'cis-warning' }
+      // iconComponent: { name: 'cis-warning' }
     },
     // {
     //   name: 'table',
