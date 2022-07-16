@@ -2,7 +2,7 @@
 
   <div class="card-body">
 
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button"  (click)="openDialog()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
       Add Appoiment
     </button>
 
@@ -46,49 +46,60 @@
       Pdf
     </button>
 
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th scope="col">Id</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-        
-      </tbody>
-    </table>
-  </div>
-</div>
+<br>
+    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">F_Name</th>
+            <th scope="col">L_Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Address</th>
+            <th scope="col">Address1</th>
+            <th scope="col">City</th>
+            <th scope="col">Email</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Note</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let appoiment of dataSource; let i = index;">
+            <th scope="row">{{i+1}}</th>
+            <td>{{appoiment.fname}}</td>
+            <td>{{appoiment.lname}}</td>
+            <td>{{appoiment.gender}}</td>
+            <td>{{appoiment.phone}}</td>
+            <td>{{appoiment.address}}</td>
+            <td>{{appoiment.address1}}</td>
+            <td>{{appoiment.city}}</td>
+            <td>{{appoiment.email}}</td>
+            <td>{{appoiment.dname}}</td>
+            <td>{{appoiment.date}}</td>
+            <td>{{appoiment.time}}</td>
+            <td>{{appoiment.note}}</td>
+          <td></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    
+    </div>
 
 <!-- Button trigger modal -->
 
-
+<button #btnShow style="display: none;" id="btnShow" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >d</button>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Add Appoiment</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button #btnClose id="btnClose" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
 
@@ -132,7 +143,15 @@
             <label for="inputEmail4" class="form-label">Email</label>
             <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
           </div>
-
+          <div class="col-md-6">
+            <label for="inputdname" class="form-label">Doctor name</label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Select Doctor</option>
+              <option value="1">A</option>
+              <option value="2">B</option>
+              <option value="3">C</option>
+            </select>
+          </div>
           <div class="col-md-6">
             <label for="appt">Select a date</label>
             <input class="form-control" type="date" id="start" name="trip-start" value="" min="1920-01-01"
@@ -142,7 +161,10 @@
             <label for="appt">Select a time</label>
             <input type="time" class="form-control" id="appt" name="appt">
           </div>
-
+          <div class="col-mb-6">
+            <label for="exampleFormControlTextarea1" class="form-label">Note</label>
+            <textarea class="form-control" placeholder="Enter some info" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
           <!-- <div class="col-md-4">
             <label for="inputState" class="form-label">State</label>
             <select id="inputState" class="form-select">
@@ -159,7 +181,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-primary" (click)="add()">Save</button>
       </div>
     </div>
   </div>
