@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
 import { BadgeModule, CardModule, GridModule } from '@coreui/angular';
 import { ChartjsModule } from '@coreui/angular-chartjs';
 
@@ -25,6 +25,7 @@ import { RdetailsComponent } from './rdetails/rdetails.component'
     CardModule,
     GridModule,
     BadgeModule,
+    FormsModule
   
   ]
 })

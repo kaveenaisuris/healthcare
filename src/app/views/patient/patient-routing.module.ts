@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { FormsModule } from '@angular/forms';
 import { AppoimentComponent } from './appoiment/appoiment.component';
 import{EmergencyAltertComponent} from './emergency-altert/emergency-altert.component'
 import {PatientDetailsComponent} from './patient-details/patient-details.component'
@@ -63,7 +63,9 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes),
+    FormsModule
+  ],
   exports: [RouterModule],
 })
 export class PatientRoutingModule {}
