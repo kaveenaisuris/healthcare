@@ -6,7 +6,7 @@
           data-bs-target="#exampleModal">
           Add Appoiment
         </button>
-        &nbsp;
+        <!-- &nbsp;
 
         <button type="button" class="btn btn-secondary">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -16,7 +16,7 @@
             </path>
           </svg>
           Word
-        </button>
+        </button> -->
 
         &nbsp;
 
@@ -45,9 +45,14 @@
           </svg>
           Pdf
         </button>
-
+        <div class="col-md-3">
+          <input class="form-control mt-2 mb-2" type="text" [(ngModel)]="searchText" (input)="Search()"
+            placeholder="Search by name" />
+        </div>
       </div>
       <!--Table -->
+
+
       <div class="table-wrapper-scroll-y my-custom-scrollbar">
 
         <table class="table table-hover" id="atable">
@@ -113,196 +118,22 @@
           </tbody>
         </table>
 
+
+
+        <!--Table -->
       </div>
-      <!--Table -->
-    </div>
-    <!--Add Modal -->
-    <button #btnShow style="display: none;" id="btnShow" type="button" class="btn btn-primary" data-bs-toggle="modal"
-      data-bs-target="#exampleModal">d</button>
+      <!--Add Modal -->
+      <button #btnShow style="display: none;" id="btnShow" type="button" class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">d</button>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Add Appoiment</h5>
-            <button #btnClose id="btnClose" type="button" class="btn-close" data-bs-dismiss="modal"
-              aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="row g-3">
-
-              <div class="col-md-6">
-                <label for="exampleFormControlInput1" class="form-label">Name</label>
-                <input type="text" [(ngModel)]="fname" class="form-control" id="exampleFormControlInput1"
-                  placeholder="enter name">
-              </div>
-              <div class="col-md-6">
-                <label for="inputlname" class="form-label">Last name</label>
-                <input type="text" [(ngModel)]="lname" class="form-control" id="inputlname" placeholder="Last name">
-              </div>
-              <div class="col-md-6">
-                <label for="inputlname" class="form-label">Gender</label>
-                <select class="form-select" [(ngModel)]="gender" aria-label="Default select example">
-                  <option selected>Select Gender</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="Not willing to Disclone">Not willing to Disclone</option>
-                </select>
-              </div>
-              <div class="col-md-6">
-                <label for="inputphone" class="form-label">Phone number</label>
-                <input type="tel" [(ngModel)]="phone" class="form-control" id="inputlphone" placeholder="Phone number">
-              </div>
-              <div class="col-12">
-                <label for="inputAddress" class="form-label">Address Line</label>
-                <input type="text" [(ngModel)]="address" class="form-control" id="inputAddress"
-                  placeholder="Address Line1">
-              </div>
-              <div class="col-12">
-                <label for="inputAddress2" class="form-label">Address Line2</label>
-                <input type="text" [(ngModel)]="address1" class="form-control" id="inputAddress2"
-                  placeholder="Address Line2">
-              </div>
-              <div class="col-md-6">
-                <label for="inputCity" class="form-label">City</label>
-                <input type="text" [(ngModel)]="city" class="form-control" id="inputCity" placeholder="City">
-              </div>
-              <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Email</label>
-                <input type="email" [(ngModel)]="email" class="form-control" id="inputEmail4" placeholder="Email">
-              </div>
-              <div class="col-md-6">
-                <label for="inputdname" class="form-label">Doctor name</label>
-                <select class="form-select" [(ngModel)]="dname" aria-label="Default select example">
-                  <option selected>Select Doctor</option>
-                  <option value="1">A</option>
-                  <option value="2">B</option>
-                  <option value="3">C</option>
-                </select>
-              </div>
-              <div class="col-md-6">
-                <label for="appt">Select a date</label>
-                <input class="form-control" [(ngModel)]="date" type="date" id="start" name="trip-start" value=""
-                  min="1920-01-01" max="2023-12-31">
-              </div>
-              <div class="col-md-6">
-                <label for="appt">Select a time</label>
-                <input type="time" [(ngModel)]="time" class="form-control" id="appt" name="appt">
-              </div>
-              <div class="col-mb-6">
-                <label for="exampleFormControlTextarea1" class="form-label">Note</label>
-                <textarea class="form-control" [(ngModel)]="note" placeholder="Enter some info"
-                  id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add Appoiment</h5>
+              <button #btnClose id="btnClose" type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" (click)="clearEdit()" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" (click)="add()" class="btn btn-primary">Save</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Add Modal End-->
-    <!--View Details Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Add Appoiment</h5>
-            <button #btnClose id="btnClose" type="button" class="btn-close" data-bs-dismiss="modal"
-              aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="row g-3">
-
-              <div class="col-md-6">
-                <label for="exampleFormControlInput1" class="form-label">Name</label>
-                <input type="text" [(ngModel)]="fname" class="form-control" id="exampleFormControlInput1"
-                  placeholder="enter name">
-              </div>
-              <div class="col-md-6">
-                <label for="inputlname" class="form-label">Last name</label>
-                <input type="text" [(ngModel)]="lname" class="form-control" id="inputlname" placeholder="Last name">
-              </div>
-              <div class="col-md-6">
-                <label for="inputlname" class="form-label">Gender</label>
-                <select class="form-select" [(ngModel)]="gender" aria-label="Default select example">
-                  <option selected>Select Gender</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="Not willing to Disclone">Not willing to Disclone</option>
-                </select>
-              </div>
-              <div class="col-md-6">
-                <label for="inputphone" class="form-label">Phone number</label>
-                <input type="tel" [(ngModel)]="phone" class="form-control" id="inputlphone" placeholder="Phone number">
-              </div>
-              <div class="col-12">
-                <label for="inputAddress" class="form-label">Address Line</label>
-                <input type="text" [(ngModel)]="address" class="form-control" id="inputAddress"
-                  placeholder="Address Line1">
-              </div>
-              <div class="col-12">
-                <label for="inputAddress2" class="form-label">Address Line2</label>
-                <input type="text" [(ngModel)]="address1" class="form-control" id="inputAddress2"
-                  placeholder="Address Line2">
-              </div>
-              <div class="col-md-6">
-                <label for="inputCity" class="form-label">City</label>
-                <input type="text" [(ngModel)]="city" class="form-control" id="inputCity" placeholder="City">
-              </div>
-              <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Email</label>
-                <input type="email" [(ngModel)]="email" class="form-control" id="inputEmail4" placeholder="Email">
-              </div>
-              <div class="col-md-6">
-                <label for="inputdname" class="form-label">Doctor name</label>
-                <select class="form-select" [(ngModel)]="dname" aria-label="Default select example">
-                  <option selected>Select Doctor</option>
-                  <option value="1">A</option>
-                  <option value="2">B</option>
-                  <option value="3">C</option>
-                </select>
-              </div>
-              <div class="col-md-6">
-                <label for="appt">Select a date</label>
-                <input class="form-control" [(ngModel)]="date" type="date" id="start" name="trip-start" value=""
-                  min="1920-01-01" max="2023-12-31">
-              </div>
-              <div class="col-md-6">
-                <label for="appt">Select a time</label>
-                <input type="time" [(ngModel)]="time" class="form-control" id="appt" name="appt">
-              </div>
-              <div class="col-mb-6">
-                <label for="exampleFormControlTextarea1" class="form-label">Note</label>
-                <textarea class="form-control" [(ngModel)]="note" placeholder="Enter some info"
-                  id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--View Details Modal End -->
-    <!--Update Modal -->
-    <button #btnShow style="display: none;" id="btnShow" type="button" class="btn btn-primary" data-bs-toggle="modal"
-    data-bs-target="#exampleModalToggle">d</button>
-    <div class="modal fade" id="exampleModalToggle" data-bs-target="#exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-      tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Add Appoiment</h5>
-            <button #btnClose id="btnClose" type="button" class="btn-close" data-bs-dismiss="modal"
-              aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
             <div class="modal-body">
               <div class="row g-3">
 
@@ -372,14 +203,193 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" (click)="clearEdit()" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" (click)="editdetail()" class="btn btn-primary">Update</button>
+            <div class="modal-footer">
+              <button type="button" (click)="clearEdit()" class="btn btn-secondary"
+                data-bs-dismiss="modal">Close</button>
+              <button type="button" (click)="add()" class="btn btn-primary">Save</button>
+            </div>
           </div>
         </div>
       </div>
+      <!--Add Modal End-->
+      <!--View Details Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add Appoiment</h5>
+              <button #btnClose id="btnClose" type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row g-3">
+
+                <div class="col-md-6">
+                  <label for="exampleFormControlInput1" class="form-label">Name</label>
+                  <input type="text" [(ngModel)]="fname" class="form-control" id="exampleFormControlInput1"
+                    placeholder="enter name">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputlname" class="form-label">Last name</label>
+                  <input type="text" [(ngModel)]="lname" class="form-control" id="inputlname" placeholder="Last name">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputlname" class="form-label">Gender</label>
+                  <select class="form-select" [(ngModel)]="gender" aria-label="Default select example">
+                    <option selected>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Not willing to Disclone">Not willing to Disclone</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputphone" class="form-label">Phone number</label>
+                  <input type="tel" [(ngModel)]="phone" class="form-control" id="inputlphone"
+                    placeholder="Phone number">
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress" class="form-label">Address Line</label>
+                  <input type="text" [(ngModel)]="address" class="form-control" id="inputAddress"
+                    placeholder="Address Line1">
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress2" class="form-label">Address Line2</label>
+                  <input type="text" [(ngModel)]="address1" class="form-control" id="inputAddress2"
+                    placeholder="Address Line2">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputCity" class="form-label">City</label>
+                  <input type="text" [(ngModel)]="city" class="form-control" id="inputCity" placeholder="City">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputEmail4" class="form-label">Email</label>
+                  <input type="email" [(ngModel)]="email" class="form-control" id="inputEmail4" placeholder="Email">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputdname" class="form-label">Doctor name</label>
+                  <select class="form-select" [(ngModel)]="dname" aria-label="Default select example">
+                    <option selected>Select Doctor</option>
+                    <option value="1">A</option>
+                    <option value="2">B</option>
+                    <option value="3">C</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="appt">Select a date</label>
+                  <input class="form-control" [(ngModel)]="date" type="date" id="start" name="trip-start" value=""
+                    min="1920-01-01" max="2023-12-31">
+                </div>
+                <div class="col-md-6">
+                  <label for="appt">Select a time</label>
+                  <input type="time" [(ngModel)]="time" class="form-control" id="appt" name="appt">
+                </div>
+                <div class="col-mb-6">
+                  <label for="exampleFormControlTextarea1" class="form-label">Note</label>
+                  <textarea class="form-control" [(ngModel)]="note" placeholder="Enter some info"
+                    id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--View Details Modal End -->
+      <!--Update Modal -->
+      <button #btnShow style="display: none;" id="btnShow" type="button" class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#exampleModalToggle">d</button>
+      <div class="modal fade" id="exampleModalToggle" data-bs-target="#exampleModalToggle" aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add Appoiment</h5>
+              <button #btnClose id="btnClose" type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-body">
+                <div class="row g-3">
+
+                  <div class="col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                    <input type="text" [(ngModel)]="fname" class="form-control" id="exampleFormControlInput1"
+                      placeholder="enter name">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputlname" class="form-label">Last name</label>
+                    <input type="text" [(ngModel)]="lname" class="form-control" id="inputlname" placeholder="Last name">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputlname" class="form-label">Gender</label>
+                    <select class="form-select" [(ngModel)]="gender" aria-label="Default select example">
+                      <option selected>Select Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Not willing to Disclone">Not willing to Disclone</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputphone" class="form-label">Phone number</label>
+                    <input type="tel" [(ngModel)]="phone" class="form-control" id="inputlphone"
+                      placeholder="Phone number">
+                  </div>
+                  <div class="col-12">
+                    <label for="inputAddress" class="form-label">Address Line</label>
+                    <input type="text" [(ngModel)]="address" class="form-control" id="inputAddress"
+                      placeholder="Address Line1">
+                  </div>
+                  <div class="col-12">
+                    <label for="inputAddress2" class="form-label">Address Line2</label>
+                    <input type="text" [(ngModel)]="address1" class="form-control" id="inputAddress2"
+                      placeholder="Address Line2">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputCity" class="form-label">City</label>
+                    <input type="text" [(ngModel)]="city" class="form-control" id="inputCity" placeholder="City">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" [(ngModel)]="email" class="form-control" id="inputEmail4" placeholder="Email">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputdname" class="form-label">Doctor name</label>
+                    <select class="form-select" [(ngModel)]="dname" aria-label="Default select example">
+                      <option selected>Select Doctor</option>
+                      <option value="1">A</option>
+                      <option value="2">B</option>
+                      <option value="3">C</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="appt">Select a date</label>
+                    <input class="form-control" [(ngModel)]="date" type="date" id="start" name="trip-start" value=""
+                      min="1920-01-01" max="2023-12-31">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="appt">Select a time</label>
+                    <input type="time" [(ngModel)]="time" class="form-control" id="appt" name="appt">
+                  </div>
+                  <div class="col-mb-6">
+                    <label for="exampleFormControlTextarea1" class="form-label">Note</label>
+                    <textarea class="form-control" [(ngModel)]="note" placeholder="Enter some info"
+                      id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" (click)="clearEdit()" class="btn btn-secondary"
+                data-bs-dismiss="modal">Close</button>
+              <button type="button" (click)="editdetail()" class="btn btn-primary">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Update Modal End -->
     </div>
-    <!--Update Modal End -->   
   </div>
-</div>

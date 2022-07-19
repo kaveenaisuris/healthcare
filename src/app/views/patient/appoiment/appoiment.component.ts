@@ -8,14 +8,16 @@ import {
 
 import { jsPDF } from "jspdf";
 import html2canvas from 'html2canvas';
-import { AppoimentDetailsComponent } from '../appoiment-details/appoiment-details.component';
+
 @Component({
   selector: 'app-appoiment',
   templateUrl: './appoiment.component.html',
   styleUrls: ['./appoiment.component.scss']
 })
 export class AppoimentComponent implements OnInit {
-  
+  fileName= 'AppoimentSheet.xlsx';
+  searchText = "";
+  listOfContacts: any;
   title(title: any) {
     throw new Error('Method not implemented.');
   }
@@ -175,8 +177,18 @@ editdetail() {
 
   exportexcel(): void
   {
-    
+    /* pass here the table id */
+    let element = document.getElementById('atable');
+    const ws: XLSX.WorkSheet =XLSX.utils.table_to_sheet(element);
+ 
+    /* generate workbook and add the worksheet */
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+ 
+    /* save to file */  
+    XLSX.writeFile(wb, this.fileName);
   }
+
   public convertToPDF()
 {
 html2canvas(document.getElementById("atable")!).then(canvas => {
@@ -187,7 +199,29 @@ let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
 var width = pdf.internal.pageSize.getWidth();
 var height = canvas.height * width / canvas.width;
 pdf.addImage(contentDataURL, 'PNG', 0, 0, width, height)
-pdf.save('output.pdf'); // Generated PDF
+pdf.save('AppoimentSheet.pdf'); // Generated PDF
 });
 }
+
+Search(){
+  // alert(this.searchText)
+   if(this.searchText!== ""){
+     let searchValue = this.searchText.toLocaleLowerCase();
+    
+     this.listOfContacts = this.listOfContacts.filter((contact:any) =>{
+       return contact.name.toLocaleLowerCase().match(searchValue )
+       ;
+     // you can keep on adding object properties here   
+     
+           });
+           
+           console.log(this.listOfContacts);
+         }
+         else { 
+        
+           // if(this.searchText== ""){ you don't need this if
+           
+         } 
+     }
+
 }

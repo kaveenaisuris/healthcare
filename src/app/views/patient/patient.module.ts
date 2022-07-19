@@ -13,12 +13,12 @@ import{EmergencyAltertComponent} from './emergency-altert/emergency-altert.compo
 import { PatientDetailsComponent } from './patient-details/patient-details.component';
 import { PdetailsComponent } from './pdetails/pdetails.component';
 import { RdetailsComponent } from './rdetails/rdetails.component';
-import { AppoimentDetailsComponent } from './appoiment-details/appoiment-details.component'
+
 // import {RfidDetailsComponent} from './healthcare-db/rfid-details/rfid-details.component';
 // import { PatientDetailsComponent } from './healthcare-db/patient-details/patient-details.component'
 
 @NgModule({
-  declarations: [AppoimentComponent,EmergencyAltertComponent, PatientDetailsComponent, PdetailsComponent, RdetailsComponent, AppoimentDetailsComponent],
+  declarations: [AppoimentComponent,EmergencyAltertComponent, PatientDetailsComponent, PdetailsComponent, RdetailsComponent],
   imports: [
     CommonModule,
     PatientRoutingModule,
