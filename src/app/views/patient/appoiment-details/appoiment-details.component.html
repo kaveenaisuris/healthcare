@@ -1,0 +1,82 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Appoiment</h5>
+          <button #btnClose id="btnClose" type="button" class="btn-close" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body" *ngFor="let item of dataSource">
+          <div class="row g-3">
+
+            <div class="col-md-6">
+              <label for="exampleFormControlInput1" class="form-label">Name</label>
+              <input type="text" {{item.fname}} class="form-control" id="exampleFormControlInput1"
+                placeholder="enter name">
+            </div>
+            <div class="col-md-6">
+              <label for="inputlname" class="form-label">Last name</label>
+              <input type="text" {{item.lname}} class="form-control" id="inputlname" placeholder="Last name">
+            </div>
+            <div class="col-md-6">
+              <label for="inputlname" {{item.gender}} class="form-label">Gender</label>
+              <select class="form-select"  aria-label="Default select example">
+                <option selected>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Not willing to Disclone">Not willing to Disclone</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="inputphone" class="form-label">Phone number</label>
+              <input type="tel" {{item.phone}} class="form-control" id="inputlphone" placeholder="Phone number">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Address Line</label>
+              <input type="text" {{item.address}} class="form-control" id="inputAddress"
+                placeholder="Address Line1">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">Address Line2</label>
+              <input type="text" {{item.address1}} class="form-control" id="inputAddress2"
+                placeholder="Address Line2">
+            </div>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">City</label>
+              <input type="text" {{item.city}} class="form-control" id="inputCity" placeholder="City">
+            </div>
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Email</label>
+              <input type="email" {{item.email}} class="form-control" id="inputEmail4" placeholder="Email">
+            </div>
+            <div class="col-md-6">
+              <label for="inputdname" class="form-label">Doctor name</label>
+              <select class="form-select" {{item.dname}} aria-label="Default select example">
+                <option selected>Select Doctor</option>
+                <option value="1">A</option>
+                <option value="2">B</option>
+                <option value="3">C</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="appt">Select a date</label>
+              <input class="form-control" {{item.date}} type="date" id="start" name="trip-start" value=""
+                min="1920-01-01" max="2023-12-31">
+            </div>
+            <div class="col-md-6">
+              <label for="appt">Select a time</label>
+              <input type="time" {{item.time}} class="form-control" id="appt" name="appt">
+            </div>
+            <div class="col-mb-6">
+              <label for="exampleFormControlTextarea1" class="form-label">Note</label>
+              <textarea class="form-control" {{item.note}} placeholder="Enter some info"
+                id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

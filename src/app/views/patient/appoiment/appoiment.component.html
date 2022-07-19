@@ -9,104 +9,118 @@
         &nbsp;
 
         <button type="button" class="btn btn-secondary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-file-earmark-word-fill" viewBox="0 0 16 16">
-                <path
-                    d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM5.485 6.879l1.036 4.144.997-3.655a.5.5 0 0 1 .964 0l.997 3.655 1.036-4.144a.5.5 0 0 1 .97.242l-1.5 6a.5.5 0 0 1-.967.01L8 9.402l-1.018 3.73a.5.5 0 0 1-.967-.01l-1.5-6a.5.5 0 1 1 .97-.242z">
-                </path>
-            </svg>
-            Word
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-file-earmark-word-fill" viewBox="0 0 16 16">
+            <path
+              d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM5.485 6.879l1.036 4.144.997-3.655a.5.5 0 0 1 .964 0l.997 3.655 1.036-4.144a.5.5 0 0 1 .97.242l-1.5 6a.5.5 0 0 1-.967.01L8 9.402l-1.018 3.73a.5.5 0 0 1-.967-.01l-1.5-6a.5.5 0 1 1 .97-.242z">
+            </path>
+          </svg>
+          Word
         </button>
 
         &nbsp;
 
-        <button type="button" class="btn btn-secondary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-file-earmark-spreadsheet-fill" viewBox="0 0 16 16">
-                <path d="M6 12v-2h3v2H6z"></path>
-                <path
-                    d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM3 9h10v1h-3v2h3v1h-3v2H9v-2H6v2H5v-2H3v-1h2v-2H3V9z">
-                </path>
-            </svg>
-            Excel
+        <button type="button" (click)="exportexcel()" class="btn btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-file-earmark-spreadsheet-fill" viewBox="0 0 16 16">
+            <path d="M6 12v-2h3v2H6z"></path>
+            <path
+              d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM3 9h10v1h-3v2h3v1h-3v2H9v-2H6v2H5v-2H3v-1h2v-2H3V9z">
+            </path>
+          </svg>
+          Excel
         </button>
 
         &nbsp;
 
-        <button type="button" class="btn btn-secondary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-file-earmark-pdf-fill" viewBox="0 0 16 16">
-                <path
-                    d="M5.523 12.424c.14-.082.293-.162.459-.238a7.878 7.878 0 0 1-.45.606c-.28.337-.498.516-.635.572a.266.266 0 0 1-.035.012.282.282 0 0 1-.026-.044c-.056-.11-.054-.216.04-.36.106-.165.319-.354.647-.548zm2.455-1.647c-.119.025-.237.05-.356.078a21.148 21.148 0 0 0 .5-1.05 12.045 12.045 0 0 0 .51.858c-.217.032-.436.07-.654.114zm2.525.939a3.881 3.881 0 0 1-.435-.41c.228.005.434.022.612.054.317.057.466.147.518.209a.095.095 0 0 1 .026.064.436.436 0 0 1-.06.2.307.307 0 0 1-.094.124.107.107 0 0 1-.069.015c-.09-.003-.258-.066-.498-.256zM8.278 6.97c-.04.244-.108.524-.2.829a4.86 4.86 0 0 1-.089-.346c-.076-.353-.087-.63-.046-.822.038-.177.11-.248.196-.283a.517.517 0 0 1 .145-.04c.013.03.028.092.032.198.005.122-.007.277-.038.465z">
-                </path>
-                <path fill-rule="evenodd"
-                    d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3zM4.165 13.668c.09.18.23.343.438.419.207.075.412.04.58-.03.318-.13.635-.436.926-.786.333-.401.683-.927 1.021-1.51a11.651 11.651 0 0 1 1.997-.406c.3.383.61.713.91.95.28.22.603.403.934.417a.856.856 0 0 0 .51-.138c.155-.101.27-.247.354-.416.09-.181.145-.37.138-.563a.844.844 0 0 0-.2-.518c-.226-.27-.596-.4-.96-.465a5.76 5.76 0 0 0-1.335-.05 10.954 10.954 0 0 1-.98-1.686c.25-.66.437-1.284.52-1.794.036-.218.055-.426.048-.614a1.238 1.238 0 0 0-.127-.538.7.7 0 0 0-.477-.365c-.202-.043-.41 0-.601.077-.377.15-.576.47-.651.823-.073.34-.04.736.046 1.136.088.406.238.848.43 1.295a19.697 19.697 0 0 1-1.062 2.227 7.662 7.662 0 0 0-1.482.645c-.37.22-.699.48-.897.787-.21.326-.275.714-.08 1.103z">
-                </path>
-            </svg>
-            Pdf
+        <button type="button" (click)="convertToPDF()" class="btn btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-file-earmark-pdf-fill" viewBox="0 0 16 16">
+            <path
+              d="M5.523 12.424c.14-.082.293-.162.459-.238a7.878 7.878 0 0 1-.45.606c-.28.337-.498.516-.635.572a.266.266 0 0 1-.035.012.282.282 0 0 1-.026-.044c-.056-.11-.054-.216.04-.36.106-.165.319-.354.647-.548zm2.455-1.647c-.119.025-.237.05-.356.078a21.148 21.148 0 0 0 .5-1.05 12.045 12.045 0 0 0 .51.858c-.217.032-.436.07-.654.114zm2.525.939a3.881 3.881 0 0 1-.435-.41c.228.005.434.022.612.054.317.057.466.147.518.209a.095.095 0 0 1 .026.064.436.436 0 0 1-.06.2.307.307 0 0 1-.094.124.107.107 0 0 1-.069.015c-.09-.003-.258-.066-.498-.256zM8.278 6.97c-.04.244-.108.524-.2.829a4.86 4.86 0 0 1-.089-.346c-.076-.353-.087-.63-.046-.822.038-.177.11-.248.196-.283a.517.517 0 0 1 .145-.04c.013.03.028.092.032.198.005.122-.007.277-.038.465z">
+            </path>
+            <path fill-rule="evenodd"
+              d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3zM4.165 13.668c.09.18.23.343.438.419.207.075.412.04.58-.03.318-.13.635-.436.926-.786.333-.401.683-.927 1.021-1.51a11.651 11.651 0 0 1 1.997-.406c.3.383.61.713.91.95.28.22.603.403.934.417a.856.856 0 0 0 .51-.138c.155-.101.27-.247.354-.416.09-.181.145-.37.138-.563a.844.844 0 0 0-.2-.518c-.226-.27-.596-.4-.96-.465a5.76 5.76 0 0 0-1.335-.05 10.954 10.954 0 0 1-.98-1.686c.25-.66.437-1.284.52-1.794.036-.218.055-.426.048-.614a1.238 1.238 0 0 0-.127-.538.7.7 0 0 0-.477-.365c-.202-.043-.41 0-.601.077-.377.15-.576.47-.651.823-.073.34-.04.736.046 1.136.088.406.238.848.43 1.295a19.697 19.697 0 0 1-1.062 2.227 7.662 7.662 0 0 0-1.482.645c-.37.22-.699.48-.897.787-.21.326-.275.714-.08 1.103z">
+            </path>
+          </svg>
+          Pdf
         </button>
 
       </div>
-      
+      <!--Table -->
       <div class="table-wrapper-scroll-y my-custom-scrollbar">
 
-        <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">First_Name</th>
-            <th scope="col">Last_Name</th>
-            <th scope="col">Gender</th>
-            <th scope="col">Phone</th>
-            <th scope="col">Address</th>
-            <th scope="col">Address1</th>
-            <th scope="col">City</th>
-            <th scope="col">Email</th>
-            <th scope="col">Doctor_Name</th>
-            <th scope="col">Appoiment_Date</th>
-            <th scope="col">Time</th>
-            <th scope="col">Note</th>
-            <th scope="col"> Action </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let item of dataSource; let i = index;">
-            <th scope="row">{{i+1}}</th>
-            <td>{{item.fname}}</td>
-            <td>{{item.lname}}</td>
-            <td>{{item.gender}}</td>
-            <td>{{item.phone}}</td>
-            <td>{{item.address}}</td>
-            <td>{{item.address1}}</td>
-            <td>{{item.city}}</td>
-            <td>{{item.email}}</td>
-            <td>{{item.dname}}</td>
-            <td>{{item.date}}</td>
-            <td>{{item.time}}</td>
-            <td>{{item.note}}</td>
-            <td class="action">
-              <svg (click)="edit(item.id)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                <path
-                  d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
-              </svg>
-              &nbsp;
-              <svg (click)="deleteItem(item.id)" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                <path
-                  d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
-              </svg>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
-    </div>
+        <table class="table table-hover" id="atable">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">First_Name</th>
+              <th scope="col">Last_Name</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Address</th>
+              <th scope="col">Address1</th>
+              <th scope="col">City</th>
+              <th scope="col">Email</th>
+              <th scope="col">Doctor_Name</th>
+              <th scope="col">Appoiment_Date</th>
+              <th scope="col">Time</th>
+              <th scope="col">Note</th>
+              <th scope="col">Action_Button </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of dataSource; let i = index;">
+              <th scope="row">{{i+1}}</th>
+              <td>{{item.fname}}</td>
+              <td>{{item.lname}}</td>
+              <td>{{item.gender}}</td>
+              <td>{{item.phone}}</td>
+              <td>{{item.address}}</td>
+              <td>{{item.address1}}</td>
+              <td>{{item.city}}</td>
+              <td>{{item.email}}</td>
+              <td>{{item.dname}}</td>
+              <td>{{item.date}}</td>
+              <td>{{item.time}}</td>
+              <td>{{item.note}}</td>
+              <td class="action">
 
+                <svg (click)="detailsOpen(item.id)" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi bi-eye-fill" viewBox="0 0 16 16">
+                  <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                  <path
+                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+
+                </svg>
+
+                &nbsp;
+                <svg (click)="edit(item.id)" data-bs-toggle="modal" href="#exampleModalToggle"
+                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                </svg>
+                &nbsp;
+                <svg (click)="deleteItem(item.id)" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                </svg>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <!--Table -->
+    </div>
+    <!--Add Modal -->
     <button #btnShow style="display: none;" id="btnShow" type="button" class="btn btn-primary" data-bs-toggle="modal"
       data-bs-target="#exampleModal">d</button>
 
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -115,77 +129,257 @@
               aria-label="Close"></button>
           </div>
           <div class="modal-body">
-<div class="row g-3">
+            <div class="row g-3">
 
-            <div class="col-md-6">
-              <label for="exampleFormControlInput1" class="form-label">Name</label>
-              <input type="text" [(ngModel)]="fname" class="form-control" id="exampleFormControlInput1"
-                placeholder="enter name">
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="text" [(ngModel)]="fname" class="form-control" id="exampleFormControlInput1"
+                  placeholder="enter name">
+              </div>
+              <div class="col-md-6">
+                <label for="inputlname" class="form-label">Last name</label>
+                <input type="text" [(ngModel)]="lname" class="form-control" id="inputlname" placeholder="Last name">
+              </div>
+              <div class="col-md-6">
+                <label for="inputlname" class="form-label">Gender</label>
+                <select class="form-select" [(ngModel)]="gender" aria-label="Default select example">
+                  <option selected>Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Not willing to Disclone">Not willing to Disclone</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="inputphone" class="form-label">Phone number</label>
+                <input type="tel" [(ngModel)]="phone" class="form-control" id="inputlphone" placeholder="Phone number">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address Line</label>
+                <input type="text" [(ngModel)]="address" class="form-control" id="inputAddress"
+                  placeholder="Address Line1">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Address Line2</label>
+                <input type="text" [(ngModel)]="address1" class="form-control" id="inputAddress2"
+                  placeholder="Address Line2">
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" [(ngModel)]="city" class="form-control" id="inputCity" placeholder="City">
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" [(ngModel)]="email" class="form-control" id="inputEmail4" placeholder="Email">
+              </div>
+              <div class="col-md-6">
+                <label for="inputdname" class="form-label">Doctor name</label>
+                <select class="form-select" [(ngModel)]="dname" aria-label="Default select example">
+                  <option selected>Select Doctor</option>
+                  <option value="1">A</option>
+                  <option value="2">B</option>
+                  <option value="3">C</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="appt">Select a date</label>
+                <input class="form-control" [(ngModel)]="date" type="date" id="start" name="trip-start" value=""
+                  min="1920-01-01" max="2023-12-31">
+              </div>
+              <div class="col-md-6">
+                <label for="appt">Select a time</label>
+                <input type="time" [(ngModel)]="time" class="form-control" id="appt" name="appt">
+              </div>
+              <div class="col-mb-6">
+                <label for="exampleFormControlTextarea1" class="form-label">Note</label>
+                <textarea class="form-control" [(ngModel)]="note" placeholder="Enter some info"
+                  id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
             </div>
-            <div class="col-md-6">
-              <label for="inputlname" class="form-label">Last name</label>
-              <input type="text" [(ngModel)]="lname" class="form-control" id="inputlname" placeholder="Last name">
-            </div>
-            <div class="col-md-6">
-              <label for="inputlname" class="form-label">Gender</label>
-              <select class="form-select" [(ngModel)]="gender" aria-label="Default select example">
-                <option selected>Select Gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Not willing to Disclone">Not willing to Disclone</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label for="inputphone" class="form-label">Phone number</label>
-              <input type="tel" [(ngModel)]="phone" class="form-control" id="inputlphone" placeholder="Phone number">
-            </div>
-            <div class="col-12">
-              <label for="inputAddress" class="form-label">Address Line</label>
-              <input type="text" [(ngModel)]="address" class="form-control" id="inputAddress" placeholder="Address Line1">
-            </div>
-            <div class="col-12">
-              <label for="inputAddress2" class="form-label">Address Line2</label>
-              <input type="text" [(ngModel)]="address1" class="form-control" id="inputAddress2" placeholder="Address Line2">
-            </div>
-            <div class="col-md-6">
-              <label for="inputCity" class="form-label">City</label>
-              <input type="text" [(ngModel)]="city" class="form-control" id="inputCity" placeholder="City">
-            </div>
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email" [(ngModel)]="email" class="form-control" id="inputEmail4" placeholder="Email">
-            </div>
-            <div class="col-md-6">
-              <label for="inputdname" class="form-label">Doctor name</label>
-              <select class="form-select" [(ngModel)]="dname" aria-label="Default select example">
-                <option selected>Select Doctor</option>
-                <option value="1">A</option>
-                <option value="2">B</option>
-                <option value="3">C</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label for="appt">Select a date</label>
-              <input class="form-control" [(ngModel)]="date" type="date" id="start" name="trip-start" value="" min="1920-01-01"
-                max="2023-12-31">
-            </div>
-            <div class="col-md-6">
-              <label for="appt">Select a time</label>
-              <input type="time" [(ngModel)]="time" class="form-control" id="appt" name="appt">
-            </div>
-            <div class="col-mb-6">
-              <label for="exampleFormControlTextarea1" class="form-label">Note</label>
-              <textarea class="form-control" [(ngModel)]="note" placeholder="Enter some info" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-          </div>
           </div>
           <div class="modal-footer">
             <button type="button" (click)="clearEdit()" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" (click)="add()" class="btn btn-primary">Save changes</button>
+            <button type="button" (click)="add()" class="btn btn-primary">Save</button>
           </div>
         </div>
       </div>
     </div>
+    <!--Add Modal End-->
+    <!--View Details Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Appoiment</h5>
+            <button #btnClose id="btnClose" type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-3">
+
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="text" [(ngModel)]="fname" class="form-control" id="exampleFormControlInput1"
+                  placeholder="enter name">
+              </div>
+              <div class="col-md-6">
+                <label for="inputlname" class="form-label">Last name</label>
+                <input type="text" [(ngModel)]="lname" class="form-control" id="inputlname" placeholder="Last name">
+              </div>
+              <div class="col-md-6">
+                <label for="inputlname" class="form-label">Gender</label>
+                <select class="form-select" [(ngModel)]="gender" aria-label="Default select example">
+                  <option selected>Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Not willing to Disclone">Not willing to Disclone</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="inputphone" class="form-label">Phone number</label>
+                <input type="tel" [(ngModel)]="phone" class="form-control" id="inputlphone" placeholder="Phone number">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address Line</label>
+                <input type="text" [(ngModel)]="address" class="form-control" id="inputAddress"
+                  placeholder="Address Line1">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Address Line2</label>
+                <input type="text" [(ngModel)]="address1" class="form-control" id="inputAddress2"
+                  placeholder="Address Line2">
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" [(ngModel)]="city" class="form-control" id="inputCity" placeholder="City">
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" [(ngModel)]="email" class="form-control" id="inputEmail4" placeholder="Email">
+              </div>
+              <div class="col-md-6">
+                <label for="inputdname" class="form-label">Doctor name</label>
+                <select class="form-select" [(ngModel)]="dname" aria-label="Default select example">
+                  <option selected>Select Doctor</option>
+                  <option value="1">A</option>
+                  <option value="2">B</option>
+                  <option value="3">C</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="appt">Select a date</label>
+                <input class="form-control" [(ngModel)]="date" type="date" id="start" name="trip-start" value=""
+                  min="1920-01-01" max="2023-12-31">
+              </div>
+              <div class="col-md-6">
+                <label for="appt">Select a time</label>
+                <input type="time" [(ngModel)]="time" class="form-control" id="appt" name="appt">
+              </div>
+              <div class="col-mb-6">
+                <label for="exampleFormControlTextarea1" class="form-label">Note</label>
+                <textarea class="form-control" [(ngModel)]="note" placeholder="Enter some info"
+                  id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--View Details Modal End -->
+    <!--Update Modal -->
+    <button #btnShow style="display: none;" id="btnShow" type="button" class="btn btn-primary" data-bs-toggle="modal"
+    data-bs-target="#exampleModalToggle">d</button>
+    <div class="modal fade" id="exampleModalToggle" data-bs-target="#exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+      tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Appoiment</h5>
+            <button #btnClose id="btnClose" type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-body">
+              <div class="row g-3">
+
+                <div class="col-md-6">
+                  <label for="exampleFormControlInput1" class="form-label">Name</label>
+                  <input type="text" [(ngModel)]="fname" class="form-control" id="exampleFormControlInput1"
+                    placeholder="enter name">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputlname" class="form-label">Last name</label>
+                  <input type="text" [(ngModel)]="lname" class="form-control" id="inputlname" placeholder="Last name">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputlname" class="form-label">Gender</label>
+                  <select class="form-select" [(ngModel)]="gender" aria-label="Default select example">
+                    <option selected>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Not willing to Disclone">Not willing to Disclone</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputphone" class="form-label">Phone number</label>
+                  <input type="tel" [(ngModel)]="phone" class="form-control" id="inputlphone"
+                    placeholder="Phone number">
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress" class="form-label">Address Line</label>
+                  <input type="text" [(ngModel)]="address" class="form-control" id="inputAddress"
+                    placeholder="Address Line1">
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress2" class="form-label">Address Line2</label>
+                  <input type="text" [(ngModel)]="address1" class="form-control" id="inputAddress2"
+                    placeholder="Address Line2">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputCity" class="form-label">City</label>
+                  <input type="text" [(ngModel)]="city" class="form-control" id="inputCity" placeholder="City">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputEmail4" class="form-label">Email</label>
+                  <input type="email" [(ngModel)]="email" class="form-control" id="inputEmail4" placeholder="Email">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputdname" class="form-label">Doctor name</label>
+                  <select class="form-select" [(ngModel)]="dname" aria-label="Default select example">
+                    <option selected>Select Doctor</option>
+                    <option value="1">A</option>
+                    <option value="2">B</option>
+                    <option value="3">C</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="appt">Select a date</label>
+                  <input class="form-control" [(ngModel)]="date" type="date" id="start" name="trip-start" value=""
+                    min="1920-01-01" max="2023-12-31">
+                </div>
+                <div class="col-md-6">
+                  <label for="appt">Select a time</label>
+                  <input type="time" [(ngModel)]="time" class="form-control" id="appt" name="appt">
+                </div>
+                <div class="col-mb-6">
+                  <label for="exampleFormControlTextarea1" class="form-label">Note</label>
+                  <textarea class="form-control" [(ngModel)]="note" placeholder="Enter some info"
+                    id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" (click)="clearEdit()" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" (click)="editdetail()" class="btn btn-primary">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Update Modal End -->   
   </div>
 </div>
-

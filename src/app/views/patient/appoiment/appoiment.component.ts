@@ -1,16 +1,21 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-
+import { Router } from '@angular/router';
+import * as XLSX from 'xlsx';
 import {
   AngularFirestore,
   AngularFirestoreCollection,
 } from '@angular/fire/compat/firestore';
 
+import { jsPDF } from "jspdf";
+import html2canvas from 'html2canvas';
+import { AppoimentDetailsComponent } from '../appoiment-details/appoiment-details.component';
 @Component({
   selector: 'app-appoiment',
   templateUrl: './appoiment.component.html',
   styleUrls: ['./appoiment.component.scss']
 })
 export class AppoimentComponent implements OnInit {
+  
   title(title: any) {
     throw new Error('Method not implemented.');
   }
@@ -36,7 +41,7 @@ export class AppoimentComponent implements OnInit {
   @ViewChild('btnClose')
   btnClose!: ElementRef;
 
-  constructor(private store: AngularFirestore) {}
+  constructor(private store: AngularFirestore, private router: Router) {}
 
   ngOnInit() {
     this.getAll();
@@ -91,11 +96,28 @@ export class AppoimentComponent implements OnInit {
         this.dname=this.editObj.dname;
         this.date=this.editObj.date;
         this.time=this.editObj.time;
-        this.note=this.editObj.note;
-        this.openDialog();
+        this.note=this.editObj.note;     
       });
-  }
-
+}
+editdetail() {
+  this.store
+    .collection('appInfo')
+    .doc()
+    .update({ fname: this.fname, 
+      lname: this.lname, 
+      gender:this.gender,
+      phone: this.phone, 
+      address: this.address, 
+      address1: this.address1, 
+      city: this.city, 
+      email: this.email, 
+      dname: this.dname, 
+      date: this.date, 
+      time: this.time, 
+      note: this.note  
+    });
+  this.closeDialog();
+}
   openDialog() {
     this.btnShow.nativeElement.click();
   }
@@ -118,9 +140,54 @@ export class AppoimentComponent implements OnInit {
     this.date="";
     this.time="";
     this.note="";
+    
   }
 
   deleteItem(id : string){
     this.store.collection('appInfo').doc(id).delete();
   }
+  // detailsOpen(id : string){
+  //   this.router.navigate(['details', id]);
+  // }
+  detailsOpen(id: string) {
+    this.store
+      .collection('appInfo')
+      .doc(id)
+      .get()
+      .subscribe((response) => {
+        this.editObj = Object.assign({ id: response.id }, response.data());
+        this.fname = this.editObj.fname;
+        this.lname = this.editObj.lname;
+        this.gender=this.editObj.gender;
+        this.phone= this.editObj.phone;
+        this.address=this.editObj.address;
+        this.address1=this.editObj.address1;
+        this.city=this.editObj.city;
+        this.email=this.editObj.email;
+        this.dname=this.editObj.dname;
+        this.date=this.editObj.date;
+        this.time=this.editObj.time;
+        this.note=this.editObj.note;
+     
+      });
+  }
+
+
+  exportexcel(): void
+  {
+    
+  }
+  public convertToPDF()
+{
+html2canvas(document.getElementById("atable")!).then(canvas => {
+// Few necessary setting options
+ 
+const contentDataURL = canvas.toDataURL('image/png')
+let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
+var width = pdf.internal.pageSize.getWidth();
+var height = canvas.height * width / canvas.width;
+pdf.addImage(contentDataURL, 'PNG', 0, 0, width, height)
+pdf.save('output.pdf'); // Generated PDF
+});
+}
 }
