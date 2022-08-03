@@ -16,7 +16,7 @@ import { RdetailsComponent } from './rdetails/rdetails.component';
 
 // import {RfidDetailsComponent} from './healthcare-db/rfid-details/rfid-details.component';
 // import { PatientDetailsComponent } from './healthcare-db/patient-details/patient-details.component'
-
+import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [AppoimentComponent,EmergencyAltertComponent, PatientDetailsComponent, PdetailsComponent, RdetailsComponent],
   imports: [
@@ -26,7 +26,9 @@ import { RdetailsComponent } from './rdetails/rdetails.component';
     CardModule,
     GridModule,
     BadgeModule,
-    FormsModule
+    FormsModule,
+    NgbPaginationModule, 
+    NgbAlertModule
   
   ]
 })

@@ -101,13 +101,14 @@ export const navItems: INavData[] = [
     url: '/patient',
     // iconComponent: { name: 'cil-puzzle' },
     children: [
-      {
-        name: 'RFID Details',
-        url: '/patient/rfid-details'
-      },
+     
       {
         name: 'Patient Details',
         url: '/patient/patient-details'
+      },
+      {
+        name: 'RFID Details',
+        url: '/patient/rfid-details'
       },
     ]
     },

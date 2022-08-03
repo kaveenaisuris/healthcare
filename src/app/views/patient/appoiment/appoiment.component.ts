@@ -15,6 +15,8 @@ import html2canvas from 'html2canvas';
   styleUrls: ['./appoiment.component.scss']
 })
 export class AppoimentComponent implements OnInit {
+  page = 1;
+  pageSize = 4;
   fileName= 'AppoimentSheet.xlsx';
   searchText = "";
   listOfContacts: any;
